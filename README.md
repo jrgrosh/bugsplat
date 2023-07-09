@@ -6,12 +6,12 @@ Many of the splats are small. I eventually accepted the fact that I could not, i
 
 This created a problem. If splats of a certain size had both many labeled and unlabeled examples in the data, the model would become confused. To solve this issue, I decided to remove labels from the dataset that had less width or height than a certain percentage of the image's respective width or height.
 
-27 samples are at least 10% of width and height of image
-152 samples are at least 5% of width and height of image
-952 samples are at least 2.5% of width and height of image
-2392 samples are at least 1.75% of width and height of image
-6225 samples are at least 1% of width and height of image
-12693 samples are at least 0% of width and height of image
+* 27 samples are at least 10% of width and height of image
+* 152 samples are at least 5% of width and height of image
+* 952 samples are at least 2.5% of width and height of image
+* 2392 samples are at least 1.75% of width and height of image
+* 6225 samples are at least 1% of width and height of image
+* 12693 samples are at least 0% of width and height of image
 
 After overfitting (making train and validation datasets the same) on data using thresholds of 2.5%, 1.75%, and 1% for twenty epochs, I saw that using the 1% threshold overfit the best.
 
